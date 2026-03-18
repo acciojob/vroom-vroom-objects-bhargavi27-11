@@ -4,12 +4,12 @@ function Car(make, model) {
 	this.model = model;
 }
 
-car.prototype.getMakeModel1 = function(){
+Car.prototype.getMakeModel1 = function() {
 	return this.make + " " + this.model;
 }
 
 function SportsCar(make, model, topSpeed) {
-	car.call(this,make,model);
+	Car.call(this, make, model);
 	this.topSpeed = topSpeed;
 }
 SportsCar.prototype = Object.create(car.prototype);
